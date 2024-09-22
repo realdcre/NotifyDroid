@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notifyd.MainPage">
+
+    <ScrollView>
+        <StackLayout 
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="useappicon.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Send Notification"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry x:Name="titlen" Placeholder="Notification Title" FontSize="21" MaxLength="65"></Entry>
+            <Entry x:Name="contentn" Placeholder="Notification Body" HeightRequest="80" FontSize="16" MaxLength="240"></Entry>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Send Notification" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="SendNotClicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="#fe9496"/>
+            <BoxView
+                HeightRequest="30" BackgroundColor="Transparent"></BoxView>
+            
+            <Image
+                 Source="profilepicture.png"
+                 HeightRequest="50"
+                 Aspect="AspectFit"
+                 SemanticProperties.Description="dot net bot in a race car number eight" />
+            <Label
+                   Text="(C) 2024 dcre, LDNX development LLC"
+                   Style="{StaticResource SubHeadline}" FontSize="10"
+                   ></Label>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

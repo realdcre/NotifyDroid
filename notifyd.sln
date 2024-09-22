@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notifyd", "notifyd\notifyd.csproj", "{2999C3AD-147D-4905-9CBA-09C1DE3312FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2999C3AD-147D-4905-9CBA-09C1DE3312FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D9C225A-EFB9-4170-9F17-651850AF1749}
+	EndGlobalSection
+EndGlobal

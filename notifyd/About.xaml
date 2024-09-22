@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notifyd.About"
+             Title="About NotifyDroid">
+    <ScrollView>
+        <StackLayout 
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="profilepicture.png"
+                HeightRequest="200"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="NotifyDroid"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}" />
+
+            <Label
+                Text="(C) 2024 dcre"
+                Style="{StaticResource SubHeadline}" 
+                FontSize="18" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <!-- Use a single Image as Button content -->
+                <Button Text="GitHub" HeightRequest="80" WidthRequest="80" Clicked="Git"/>
+
+
+                <Button Text="X" HeightRequest="80" WidthRequest="80" Clicked="X"/>
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
