@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zI4cYRxSGIk=",
+  "dgSpecHash": "1teYh3eXqnA=",
   "success": true,
-  "projectFilePath": "F:\\dev\\notifyd\\notifyd\\notifyd.csproj",
+  "projectFilePath": "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Constantin Jacob\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Constantin Jacob\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

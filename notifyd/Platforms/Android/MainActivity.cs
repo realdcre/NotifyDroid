@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Media;
+using AndroidX.Core.App; // Make sure this is added for NotificationCompat
 using Microsoft.Maui.Controls;
 
 namespace notifyd
@@ -10,6 +10,7 @@ namespace notifyd
     public class MainActivity : MauiAppCompatActivity
     {
         int id = 0;
+        
         const string CHANNEL_ID = "NotifyDroid";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -41,12 +42,13 @@ namespace notifyd
         {
             var notificationManager = (NotificationManager)GetSystemService(NotificationService);
 
-            var notificationBuilder = new Notification.Builder(this, CHANNEL_ID)
+            // Use NotificationCompat.Builder instead of Notification.Builder
+            var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .SetContentTitle(title)
                 .SetContentText(message)
                 .SetSmallIcon(Resource.Drawable.useappicon) // Ensure this drawable resource exists
-                                                            //.SetPriority(NotificationPriority.Default)
-                .SetAutoCancel(false); // Set to true to auto-cancel the notification
+                .SetAutoCancel(false) // Set to true to auto-cancel the notification
+                .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for large messages
 
             // Show the notification
             notificationManager.Notify(id++, notificationBuilder.Build());

@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Entry x:Name="titlen" Placeholder="Notification Title" FontSize="21" MaxLength="65"></Entry>
-            <Entry x:Name="contentn" Placeholder="Notification Body" HeightRequest="80" FontSize="16" MaxLength="240"></Entry>
+            <Editor x:Name="contentn" Placeholder="Notification Body" HeightRequest="80" FontSize="16" MaxLength="240"></Editor>
 
             <Button
                 x:Name="CounterBtn"
@@ -28,6 +28,8 @@
                 Clicked="SendNotClicked"
                 HorizontalOptions="Fill"
                 BackgroundColor="#fe9496"/>
+           
+           
             <BoxView
                 HeightRequest="30" BackgroundColor="Transparent"></BoxView>
             

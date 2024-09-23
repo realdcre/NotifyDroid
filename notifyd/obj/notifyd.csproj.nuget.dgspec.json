@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\dev\\notifyd\\notifyd\\notifyd.csproj": {}
+    "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj": {}
   },
   "projects": {
-    "F:\\dev\\notifyd\\notifyd\\notifyd.csproj": {
+    "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\dev\\notifyd\\notifyd\\notifyd.csproj",
+        "projectUniqueName": "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj",
         "projectName": "notifyd",
-        "projectPath": "F:\\dev\\notifyd\\notifyd\\notifyd.csproj",
+        "projectPath": "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj",
         "packagesPath": "C:\\Users\\Constantin Jacob\\.nuget\\packages\\",
-        "outputPath": "F:\\dev\\notifyd\\notifyd\\obj\\",
+        "outputPath": "F:\\dev\\NotifyDroid\\notifyd\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
