@@ -26,14 +26,16 @@
 
             <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
                 <!-- Use a single Image as Button content -->
-                <Button Text="GitHub" HeightRequest="80" WidthRequest="80" Clicked="Git"/>
+                <Button Text="GitHub" HeightRequest="80" WidthRequest="80" Clicked="Git" BackgroundColor="#fe9496"/>
 
 
-                <Button Text="X" HeightRequest="80" WidthRequest="80" Clicked="X"/>
+                <Button Text="X" HeightRequest="80" WidthRequest="80" Clicked="X" BackgroundColor="#fe9496"/>
 
 
             </StackLayout>
-
+            
+            
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>

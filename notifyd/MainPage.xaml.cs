@@ -6,8 +6,12 @@ namespace notifyd
 {
     public partial class MainPage : ContentPage
     {
+        
+
+
         public MainPage()
         {
+            
             InitializeComponent();
         }
 
@@ -18,7 +22,7 @@ namespace notifyd
 
             // Send the message to the MainActivity
             MessagingCenter.Send(this, "SendNotification", (title, message));
-
+            
             titlen.Text = string.Empty;
             contentn.Text = string.Empty;
         }
