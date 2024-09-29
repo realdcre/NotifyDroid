@@ -13,4 +13,6 @@ NotifyDroid requires the following permission:
 
 It is packaged as an APK.
 
+With Version R1.1-0, NotifyDroid now lets you save notifications to send them later!
+
 The App is written in .NET MAUI for ANDROID!

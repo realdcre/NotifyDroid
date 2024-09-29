@@ -18,7 +18,8 @@
                 Text="NotifyDroid"
                 SemanticProperties.HeadingLevel="Level1"
                 Style="{StaticResource Headline}" />
-
+            <Label Text="Version R1.1-0"
+                   HorizontalOptions="Center"/>
             <Label
                 Text="(C) 2024 dcre"
                 Style="{StaticResource SubHeadline}" 

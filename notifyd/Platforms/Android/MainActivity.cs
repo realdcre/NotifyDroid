@@ -47,46 +47,12 @@ namespace notifyd
             var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .SetContentTitle(title)
                 .SetContentText(message)
-                .SetSmallIcon(Resource.Drawable.useappicon) // Ensure this drawable resource exists
+                .SetSmallIcon(Microsoft.Maui.Resource.Drawable.useappicon)
                 .SetAutoCancel(false) // Set to true to auto-cancel the notification
                 .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for large messages
 
             // Show the notification
             notificationManager.Notify(id++, notificationBuilder.Build());
-
-            // Save the Notification in Recents
-            writeToNextRecent(title, message);
-        }
-        public void writeToNextRecent(string title, string message)
-        {
-            int noOfEntry1 = Preferences.Get("nrOfSavedEntry1", 0);
-            int noOfEntry2 = Preferences.Get("nrOfSavedEntry2", 0);
-            int noOfEntry3 = Preferences.Get("nrOfSavedEntry3", 0);
-
-            int lowestNumber = Math.Min(Math.Min(noOfEntry1, noOfEntry2), noOfEntry3);
-            int highestNumber = Math.Max(Math.Max(noOfEntry3, noOfEntry2), noOfEntry1);
-
-            if (lowestNumber == noOfEntry1)
-            {
-                int setNo = highestNumber + 1;
-                Preferences.Set("nrOfSavedEntry1", setNo);
-                Preferences.Set("recentTextT1", title);
-                Preferences.Set("recemtText1", message);
-            }
-            else if (lowestNumber == noOfEntry2)
-            {
-                int setNo = highestNumber + 1;
-                Preferences.Set("nrOfSavedEntry2", setNo);
-                Preferences.Set("recentTextT2", title);
-                Preferences.Set("recemtText2", message);
-            }
-            else if (lowestNumber == noOfEntry3)
-            {
-                int setNo = highestNumber + 1;
-                Preferences.Set("nrOfSavedEntry3", setNo);
-                Preferences.Set("recentTextT3", title);
-                Preferences.Set("recemtText3", message);
-            }
         }
     }
 }
