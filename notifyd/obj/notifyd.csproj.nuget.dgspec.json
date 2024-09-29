@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-android",
+          "net8.0-android34.0",
           "net8.0-maccatalyst"
         ],
         "sources": {
@@ -33,7 +33,7 @@
         },
         "frameworks": {
           "net8.0-android34.0": {
-            "targetAlias": "net8.0-android",
+            "targetAlias": "net8.0-android34.0",
             "projectReferences": {}
           },
           "net8.0-maccatalyst17.5": {
@@ -54,7 +54,7 @@
       },
       "frameworks": {
         "net8.0-android34.0": {
-          "targetAlias": "net8.0-android",
+          "targetAlias": "net8.0-android34.0",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -62,11 +62,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.91, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.91, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -105,11 +105,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.91, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.91, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",

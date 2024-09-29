@@ -15,8 +15,14 @@
         Title="NotifyDroid"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage"
+       
         
         />
+    <ShellContent
+        Title="Saved Items"
+        ContentTemplate="{DataTemplate local:Saved}"
+        Route="Saved"
+       />
     <ShellContent
         Title="About"
         ContentTemplate="{DataTemplate local:About}"

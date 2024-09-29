@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notifyd.Saved"
+             Title="Saved">
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <!--<Label 
+            Text="Recent Notifications"
+            VerticalOptions="Center"
+            Style="{StaticResource Headline}"
+            FontSize="Medium"
+            HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+
+                <BoxView HeightRequest="80" />
+                <Label
+               Text="{Binding RecentText1}"
+               FontSize="16"
+               WidthRequest="260"
+               VerticalOptions="Center"
+               TextColor="White"
+             />
+
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+
+                <BoxView HeightRequest="80" />
+                <Label
+       Text="{Binding RecentText2}"
+       FontSize="16"
+       WidthRequest="260"
+       VerticalOptions="Center"
+       TextColor="White"
+     />
+
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+
+                <BoxView HeightRequest="80" />
+                <Label
+       Text="{Binding RecentText3}"
+       FontSize="16"
+       WidthRequest="260"
+       VerticalOptions="Center"
+       TextColor="White"
+     />
+
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+
+
+            </StackLayout>-->
+
+            <Label
+            Text="Saved Notifications"
+            VerticalOptions="Center"
+            Style="{StaticResource Headline}"
+            FontSize="Medium"
+            HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText0}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S0" />
+            </StackLayout>
+
+            <!--<StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText1}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    /> 
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+            </StackLayout>-->
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText2}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S2"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText3}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S3"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText4}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496"  Clicked="S4" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText5}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S5" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText6}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S6" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText7}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S7" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText8}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S8" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <BoxView HeightRequest="80" />
+                <Label
+        Text="{Binding SavedText9}"
+        FontSize="16"
+        WidthRequest="260"
+        VerticalOptions="Center"
+        TextColor="White"
+    />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="S9" />
+            </StackLayout>
+
+            <!--<Button Text="Clear all Recent" HorizontalOptions="Fill"
+BackgroundColor="#fe9496"/>-->
+            <BoxView HeightRequest="30" BackgroundColor="Transparent"></BoxView>
+            <Button Text="Clear Saved" HorizontalOptions="Fill" Clicked="CA"
+BackgroundColor="#fe9496"/>
+            
+            <BoxView HeightRequest="50" BackgroundColor="Transparent" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+    

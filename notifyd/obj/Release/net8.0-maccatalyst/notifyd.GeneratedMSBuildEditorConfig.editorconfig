@@ -51,3 +51,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = notifyd.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[F:/dev/NotifyDroid/notifyd/Saved.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = notifyd.Saved.xaml
+build_metadata.AdditionalFiles.TargetPath = Saved.xaml
+build_metadata.AdditionalFiles.RelativePath = Saved.xaml
