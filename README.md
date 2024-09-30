@@ -1,4 +1,4 @@
-### DO NOT UPDATE TO R1.1-0, it is DEAD BUGGY, WAIT UNTIL I HAD TIME TO FIX IT AND UPDATE TO R1.1-1/R1.1-2 WHEN AVAILIBLE
+
 
 
 ![alt text](https://github.com/realdcre/NotifyDroid/blob/main/notifyd/Resources/Images/nofydroid.jpg)
