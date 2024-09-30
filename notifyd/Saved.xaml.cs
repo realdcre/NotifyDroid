@@ -1,196 +1,239 @@
-using Microsoft.Maui.Storage;
-using System.Timers;
-using System.ComponentModel;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Storage;
+using System.ComponentModel;
 
-namespace notifyd;
-
-public partial class Saved : ContentPage, INotifyPropertyChanged
+namespace notifyd
 {
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void OnPropertyChanged(string propertyName)
+    public partial class Saved : ContentPage, INotifyPropertyChanged
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
-    private System.Timers.Timer _timer;
-
-    private string[] _savedTexts = new string[10];
-
-    public string[] SavedTexts
-    {
-        get => _savedTexts;
-        set
+        // Define properties for each saved text
+        private string _savedText0;
+        public string SavedText0
         {
-            _savedTexts = value;
-            OnPropertyChanged(nameof(SavedTexts));
-        }
-    }
-
-    public Saved()
-    {
-        InitializeComponent();
-        BindingContext = this; // Add this line
-        _timer = new System.Timers.Timer(10000); // 10 seconds interval
-        _timer.Elapsed += UpdateValues;
-        _timer.Start();
-
-        // Force reload of all saved values
-        ReloadSavedValues();
-
-        // Subscribe to the UpdateRecentNotifications message
-        MessagingCenter.Subscribe<MainPage>(this, "UpdateRecentNotifications", (sender) =>
-        {
-            /*ReloadRecentNotifications();*/
-        });
-    }
-
-    private void ReloadSavedValues()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            _savedTexts[i] = Preferences.Get($"savedText{i}", " ");
+            get => _savedText0;
+            set
+            {
+                _savedText0 = value;
+                OnPropertyChanged(nameof(SavedText0));
+            }
         }
 
-        OnPropertyChanged(nameof(SavedTexts));
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        // Force reload of all saved values when the page appears
-        ReloadSavedValues();
-    }
-
-    private void sendNotification(string title, string message)
-    {
-        MessagingCenter.Send(this, "SendNotification", (title, message));
-    }
-
-    private void UpdateValues(object source, ElapsedEventArgs e)
-    {
-        for (int i = 0; i < 10; i++)
+        private string _savedText1;
+        public string SavedText1
         {
-            _savedTexts[i] = Preferences.Get($"savedText{i}", " ");
+            get => _savedText1;
+            set
+            {
+                _savedText1 = value;
+                OnPropertyChanged(nameof(SavedText1));
+            }
         }
 
-        OnPropertyChanged(nameof(SavedTexts));
-    }
-
-    private void S0(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT0", "");
-        string text = Preferences.Get("savedText0", "");
-        if (!string.IsNullOrEmpty(text))
+        private string _savedText2;
+        public string SavedText2
         {
-            sendNotification(title, text);
-        }
-    }
-    private void S2(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT2", "");
-        string text = Preferences.Get("savedText2", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S3(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT3", "");
-        string text = Preferences.Get("savedText3", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S4(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT4", "");
-        string text = Preferences.Get("savedText4", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S5(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT5", "");
-        string text = Preferences.Get("savedText5", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S6(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT6", "");
-        string text = Preferences.Get("savedText6", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S7(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT7", "");
-        string text = Preferences.Get("savedText7", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S8(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT8", "");
-        string text = Preferences.Get("savedText8", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private void S9(object sender, EventArgs e)
-    {
-        string title = Preferences.Get("savedTextT9", "");
-        string text = Preferences.Get("savedText9", "");
-        if (!string.IsNullOrEmpty(text))
-        {
-            sendNotification(title, text);
-        }
-    }
-    private async void CA(object sender, EventArgs e)
-    {
-
-
-        bool result = await DisplayAlert("Confirmation", "Delete all Saved Entries?", "OK", "Cancel");
-
-        if (result)
-        {
-            Preferences.Set("savedTextT0", "");
-            Preferences.Set("savedTextT2", "");
-            Preferences.Set("savedTextT3", "");
-            Preferences.Set("savedTextT4", "");
-            Preferences.Set("savedTextT5", "");
-            Preferences.Set("savedTextT6", "");
-            Preferences.Set("savedTextT7", "");
-            Preferences.Set("savedTextT8", "");
-            Preferences.Set("savedTextT9", "");
-            Preferences.Set("savedText0", "");
-            Preferences.Set("savedText2", "");
-            Preferences.Set("savedText3", "");
-            Preferences.Set("savedText4", "");
-            Preferences.Set("savedText5", "");
-            Preferences.Set("savedText6", "");
-            Preferences.Set("savedText7", "");
-            Preferences.Set("savedText8", "");
-            Preferences.Set("savedText9", "");
-        }
-        else
-        {
-            // Cancel button was clicked
+            get => _savedText2;
+            set
+            {
+                _savedText2 = value;
+                OnPropertyChanged(nameof(SavedText2));
+            }
         }
 
+        private string _savedText3;
+        public string SavedText3
+        {
+            get => _savedText3;
+            set
+            {
+                _savedText3 = value;
+                OnPropertyChanged(nameof(SavedText3));
+            }
+        }
+
+        private string _savedText4;
+        public string SavedText4
+        {
+            get => _savedText4;
+            set
+            {
+                _savedText4 = value;
+                OnPropertyChanged(nameof(SavedText4));
+            }
+        }
+
+        private string _savedText5;
+        public string SavedText5
+        {
+            get => _savedText5;
+            set
+            {
+                _savedText5 = value;
+                OnPropertyChanged(nameof(SavedText5));
+            }
+        }
+
+        private string _savedText6;
+        public string SavedText6
+        {
+            get => _savedText6;
+            set
+            {
+                _savedText6 = value;
+                OnPropertyChanged(nameof(SavedText6));
+            }
+        }
+
+        private string _savedText7;
+        public string SavedText7
+        {
+            get => _savedText7;
+            set
+            {
+                _savedText7 = value;
+                OnPropertyChanged(nameof(SavedText7));
+            }
+        }
+
+        private string _savedText8;
+        public string SavedText8
+        {
+            get => _savedText8;
+            set
+            {
+                _savedText8 = value;
+                OnPropertyChanged(nameof(SavedText8));
+            }
+        }
+
+        private string _savedText9;
+        public string SavedText9
+        {
+            get => _savedText9;
+            set
+            {
+                _savedText9 = value;
+                OnPropertyChanged(nameof(SavedText9));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public Saved()
+        {
+            InitializeComponent();
+
+            // Set the BindingContext for data binding
+            BindingContext = this;
+
+            // Load saved preferences into the properties
+            LoadSavedData();
+        }
+
+        private void LoadSavedData()
+        {
+            // Load data from Preferences and set the binding properties
+            for (int i = 0; i < 10; i++)
+            {
+                string savedText = Preferences.Get($"savedText{i}", "No saved text");
+                switch (i)
+                {
+                    case 0: SavedText0 = savedText; break;
+                    case 1: SavedText1 = savedText; break;
+                    case 2: SavedText2 = savedText; break;
+                    case 3: SavedText3 = savedText; break;
+                    case 4: SavedText4 = savedText; break;
+                    case 5: SavedText5 = savedText; break;
+                    case 6: SavedText6 = savedText; break;
+                    case 7: SavedText7 = savedText; break;
+                    case 8: SavedText8 = savedText; break;
+                    case 9: SavedText9 = savedText; break;
+                }
+            }
+        }
+
+        // Clear all saved preferences when the "Clear Saved" button is clicked
+        private void CA(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Preferences.Remove($"savedText{i}");
+                Preferences.Remove($"noOfEntry{i}"); // Clear the entry count as well
+            }
+            LoadSavedData(); // Refresh the UI after clearing
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadSavedData(); // Refresh the data whenever the page appears
+        }
+
+        // Event handlers for button clicks to show saved text in a popup
+        private async void S0(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT0", ""), Preferences.Get("savedText0", ""));
+        }
+
+        private async void S2(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT2", ""), Preferences.Get("savedText2", ""));
+        }
+
+        private async void S3(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT3", ""), Preferences.Get("savedText3", ""));
+        }
+
+        private async void S4(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT4", ""), Preferences.Get("savedText4", ""));
+        }
+
+        private async void S5(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT5", ""), Preferences.Get("savedText5", ""));
+        }
+
+        private async void S6(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT6", ""), Preferences.Get("savedText6", ""));
+        }
+
+        private async void S7(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT7", ""), Preferences.Get("savedText7", ""));
+        }
+
+        private async void S8(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT8", ""), Preferences.Get("savedText8", ""));
+        }
+
+        private async void S9(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("savedTextT9", ""), Preferences.Get("savedText9", ""));
+        }
+
+        public void sendNotification(string title, string message)
+        {
+            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(message))
+            {
+
+            }
+            else
+            {
+                // Send the message to the MainActivity using MessagingCenter
+                MessagingCenter.Send(this, "SendNotification", (title, message)); // Pass title and message as a tuple
+
+                // Clear the text inputs after sending the notification
+
+            }
+        }
     }
 }

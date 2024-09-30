@@ -18,8 +18,12 @@
                 Text="NotifyDroid"
                 SemanticProperties.HeadingLevel="Level1"
                 Style="{StaticResource Headline}" />
-            <Label Text="Version R1.1-0"
+<<<<<<< Updated upstream
+
+=======
+            <Label Text="Version R1.1-1"
                    HorizontalOptions="Center"/>
+>>>>>>> Stashed changes
             <Label
                 Text="(C) 2024 dcre"
                 Style="{StaticResource SubHeadline}" 
@@ -27,16 +31,14 @@
 
             <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
                 <!-- Use a single Image as Button content -->
-                <Button Text="GitHub" HeightRequest="80" WidthRequest="80" Clicked="Git" BackgroundColor="#fe9496"/>
+                <Button Text="GitHub" HeightRequest="80" WidthRequest="80" Clicked="Git"/>
 
 
-                <Button Text="X" HeightRequest="80" WidthRequest="80" Clicked="X" BackgroundColor="#fe9496"/>
+                <Button Text="X" HeightRequest="80" WidthRequest="80" Clicked="X"/>
 
 
             </StackLayout>
-            
-            
-            
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
