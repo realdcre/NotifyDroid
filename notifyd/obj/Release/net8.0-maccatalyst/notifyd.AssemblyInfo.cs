@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+773a9781c87150b2c1fb7a5363e88953d4d2cedc")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8083a20f87b44819ea9e4142ddfe25355b4f0402")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5b69a76e5679b8e1cc54197c012123075f4f9fe3")]
 [assembly: System.Reflection.AssemblyProductAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
