@@ -7,24 +7,50 @@
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\notifyd.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\notifyd.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\saved.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\saved.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\saved.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\saved.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|solutionrelative:notifyd\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{2999C3AD-147D-4905-9CBA-09C1DE3312FA}|notifyd\\notifyd.csproj|f:\\dev\\notifydroid\\notifyd\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -65,7 +91,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": 9,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Document",
@@ -94,6 +124,7 @@
               "IsPinned": true
             },
             {
+<<<<<<< Updated upstream
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AndroidManifest.xml",
@@ -131,6 +162,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{7d1a5679-04f2-3f4a-851f-855baa54731c}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\App.xaml.cs",
+              "RelativeDocumentMoniker": "notifyd\\App.xaml.cs",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\App.xaml.cs",
+              "RelativeToolTip": "notifyd\\App.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T13:04:00.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\App.xaml",
+              "RelativeDocumentMoniker": "notifyd\\App.xaml",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\App.xaml",
+              "RelativeToolTip": "notifyd\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-29T13:03:58.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+>>>>>>> Stashed changes
               "Title": "About.xaml",
               "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\About.xaml",
               "RelativeDocumentMoniker": "notifyd\\About.xaml",
@@ -142,6 +206,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 10,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\AppShell.xaml",
@@ -151,6 +216,31 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAQwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-22T14:38:13.003Z"
+=======
+              "DocumentIndex": 1,
+              "Title": "Saved.xaml.cs",
+              "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\Saved.xaml.cs",
+              "RelativeDocumentMoniker": "notifyd\\Saved.xaml.cs",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\Saved.xaml.cs",
+              "RelativeToolTip": "notifyd\\Saved.xaml.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAAwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T09:40:30.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Saved.xaml",
+              "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\Saved.xaml",
+              "RelativeDocumentMoniker": "notifyd\\Saved.xaml",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\Saved.xaml",
+              "RelativeToolTip": "notifyd\\Saved.xaml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwEsAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-29T09:34:18.484Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -160,6 +250,7 @@
               "RelativeDocumentMoniker": "notifyd\\MainPage.xaml",
               "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml",
               "RelativeToolTip": "notifyd\\MainPage.xaml",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAQAAAAAAAAAAAAmwCEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-22T14:28:51.109Z"
@@ -167,24 +258,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-29T09:33:40.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
               "Title": "MainActivity.cs",
               "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\Platforms\\Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "notifyd\\Platforms\\Android\\MainActivity.cs",
               "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\Platforms\\Android\\MainActivity.cs",
               "RelativeToolTip": "notifyd\\Platforms\\Android\\MainActivity.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T14:10:33.012Z",
+=======
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T21:18:58.054Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
+=======
+              "DocumentIndex": 0,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "notifyd\\Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "notifyd\\Platforms\\Android\\AndroidManifest.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-09-30T18:58:17.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+>>>>>>> Stashed changes
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "notifyd\\MainPage.xaml.cs",
               "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml.cs",
               "RelativeToolTip": "notifyd\\MainPage.xaml.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T15:16:26.887Z"
@@ -234,6 +357,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
               "WhenOpened": "2024-09-22T14:50:23.067Z"
+=======
+              "ViewState": "AgIAAHgAAAAAAAAAAAAwwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T09:25:05.044Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }

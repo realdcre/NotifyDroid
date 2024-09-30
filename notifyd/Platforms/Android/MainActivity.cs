@@ -19,7 +19,11 @@ namespace notifyd
             CreateNotificationChannel();
 
             // Subscribe to the message
-            MessagingCenter.Subscribe<MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
+            MessagingCenter.Subscribe < MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
+            {
+                SendNotification(args.title, args.message);
+            });
+            MessagingCenter.Subscribe<Saved, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
                 SendNotification(args.title, args.message);
             });
