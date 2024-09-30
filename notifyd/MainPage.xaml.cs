@@ -6,8 +6,8 @@ namespace notifyd
 {
     public partial class MainPage : ContentPage
     {
-<<<<<<< Updated upstream
-=======
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -41,15 +41,15 @@ namespace notifyd
             return maxNoOfEntry;
         }
 
->>>>>>> Stashed changes
+
         public MainPage()
         {
             InitializeComponent();
         }
 
-<<<<<<< Updated upstream
-        private void SendNotClicked(object sender, EventArgs e)
-=======
+
+        private void SendNotClicked(object sender, EventArgs e);
+
         void WriteToNextSaved(string title, string message)
         {
             int[] noOfEntries = new int[10];
@@ -109,15 +109,15 @@ namespace notifyd
         }
 
         private async void SendNotClicked(object sender, EventArgs e)
->>>>>>> Stashed changes
+
         {
             string title = titlen.Text;
             string message = contentn.Text;
 
-<<<<<<< Updated upstream
+
             // Send the message to the MainActivity
             MessagingCenter.Send(this, "SendNotification", (title, message));
-=======
+
             if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(message))
             {
                 await DisplayAlert("Error", "Please enter a message", "OK");
@@ -151,7 +151,7 @@ namespace notifyd
                 // Save the title and content using WriteToNextSaved method
                 WriteToNextSaved(title, content);
             }
->>>>>>> Stashed changes
+
 
             // Clear the text inputs after saving the message
             titlen.Text = string.Empty;

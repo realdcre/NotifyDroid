@@ -53,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,8 +67,7 @@
               "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.113\\tools\\Xamarin.Android.Common.targets",
               "ViewState": "AgIAAEoCAAAAAAAAAAAewGkCAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-09-30T19:32:29.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T19:32:29.59Z"
             },
             {
               "$type": "Document",
@@ -79,12 +78,7 @@
               "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\notifyd.csproj",
               "RelativeToolTip": "notifyd\\notifyd.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-29T13:37:13.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{7d1a5679-04f2-3f4a-851f-855baa54731c}"
+              "WhenOpened": "2024-09-29T13:37:13.781Z"
             },
             {
               "$type": "Document",
@@ -175,9 +169,9 @@
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "notifyd\\MainPage.xaml.cs",
-              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml.cs*",
-              "RelativeToolTip": "notifyd\\MainPage.xaml.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAHAAAAAAAAAA==",
+              "ToolTip": "F:\\dev\\NotifyDroid\\notifyd\\MainPage.xaml.cs",
+              "RelativeToolTip": "notifyd\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T09:25:05.044Z",
               "EditorCaption": ""
