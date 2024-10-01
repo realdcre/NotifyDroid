@@ -1,13 +1,12 @@
-﻿using Microsoft.Maui.Controls; // Ensure you have the correct using directive
+﻿using Microsoft.Maui.Controls;
 using System;
-using System.Globalization;
+using System.ComponentModel;
+using Microsoft.Maui.Storage;
 
 namespace notifyd
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -41,14 +40,10 @@ namespace notifyd
             return maxNoOfEntry;
         }
 
-
         public MainPage()
         {
             InitializeComponent();
         }
-
-
-        private void SendNotClicked(object sender, EventArgs e);
 
         void WriteToNextSaved(string title, string message)
         {
@@ -109,14 +104,9 @@ namespace notifyd
         }
 
         private async void SendNotClicked(object sender, EventArgs e)
-
         {
             string title = titlen.Text;
             string message = contentn.Text;
-
-
-            // Send the message to the MainActivity
-            MessagingCenter.Send(this, "SendNotification", (title, message));
 
             if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(message))
             {
@@ -151,7 +141,6 @@ namespace notifyd
                 // Save the title and content using WriteToNextSaved method
                 WriteToNextSaved(title, content);
             }
-
 
             // Clear the text inputs after saving the message
             titlen.Text = string.Empty;

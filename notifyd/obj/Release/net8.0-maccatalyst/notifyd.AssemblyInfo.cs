@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+01cb19497c7241802bb105c255708bbe914c5f41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+753b6943216b98d79e17c4195818f680c334ded7")]
 [assembly: System.Reflection.AssemblyProductAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("notifyd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
