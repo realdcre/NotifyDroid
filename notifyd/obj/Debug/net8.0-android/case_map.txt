@@ -1,8 +1,0 @@
-images\dotnet_bot;images\dotnet_bot
-images\github_mark;images\github_mark
-images\logo_black;images\logo_black
-images\logo_white;images\logo_white
-images\nofydroid;images\nofydroid
-images\profilepicture;images\profilepicture
-images\useappicon;images\useappicon
-raw\aboutassets;raw\AboutAssets
