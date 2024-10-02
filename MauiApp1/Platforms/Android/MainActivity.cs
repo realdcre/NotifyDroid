@@ -5,7 +5,7 @@ using AndroidX.Core.App; // Make sure this is added for NotificationCompat
 using Microsoft.Maui.Controls;
 
 
-namespace notifyd
+namespace notifyd.Platforms.Android
 {
     [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
     public class MainActivity : MauiAppCompatActivity
@@ -20,7 +20,7 @@ namespace notifyd
             CreateNotificationChannel();
 
             // Subscribe to the message
-            MessagingCenter.Subscribe < MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
+            MessagingCenter.Subscribe<MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
                 SendNotification(args.title, args.message);
             });
@@ -51,7 +51,7 @@ namespace notifyd
             var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .SetContentTitle(title)
                 .SetContentText(message)
-                .SetSmallIcon(Microsoft.Maui.Resource.Drawable.useappicon)
+                .SetSmallIcon(_Microsoft.Android.Resource.Designer.Resource.Drawable.useappicon)
                 .SetAutoCancel(false) // Set to true to auto-cancel the notification
                 .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for large messages
 
