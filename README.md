@@ -1,7 +1,7 @@
 
 
 
-![alt text](https://github.com/realdcre/NotifyDroid/blob/main/notifyd/Resources/Images/nofydroid.jpg)
+![alt text](https://github.com/realdcre/NotifyDroid/blob/main/MauiApp1/Resources/Images/nofydroid.jpg)
 
 
 
