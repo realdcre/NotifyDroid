@@ -24,6 +24,7 @@ packages/
 *.vssscc
 *.ipch
 *.DS_Store
+*.ini
 
 # Build and debug files
 Debug/
