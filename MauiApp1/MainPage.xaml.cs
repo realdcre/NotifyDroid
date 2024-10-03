@@ -102,7 +102,22 @@ namespace notifyd
             }
             return 0;
         }
+        
 
+        
+        private void SaveNextRecent(string message, string title)
+        {
+            Preferences.Set("recentText3", Preferences.Get("recentText2", ""));
+            Preferences.Set("recentTitle3", Preferences.Get("recentTitle2", ""));
+            Preferences.Set("recentText2", Preferences.Get("recentText1", ""));
+            Preferences.Set("recentTitle2", Preferences.Get("recentTitle1", ""));
+            Preferences.Set("recentText1", message);
+            Preferences.Set("recentTitle1", title);
+           
+        }
+
+
+        
         private async void SendNotClicked(object sender, EventArgs e)
         {
             string title = titlen.Text;
@@ -116,7 +131,7 @@ namespace notifyd
             {
                 // Send the message to the MainActivity using MessagingCenter
                 MessagingCenter.Send(this, "SendNotification", (title, message)); // Pass title and message as a tuple
-
+                SaveNextRecent(message, title);
                 // Clear the text inputs after sending the notification
                 titlen.Text = string.Empty;
                 contentn.Text = string.Empty;

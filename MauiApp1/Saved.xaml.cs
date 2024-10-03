@@ -117,7 +117,36 @@ namespace notifyd
                 OnPropertyChanged(nameof(SavedText9));
             }
         }
-
+        private string _recentText1;
+        public string recentText1
+        {
+            get => _recentText1;
+            set
+            {
+                _recentText1 = value;
+                OnPropertyChanged(nameof(recentText1));
+            }
+        }
+        private string _recentText2;
+        public string recentText2
+        {
+            get => _recentText2;
+            set
+            {
+                _recentText2 = value;
+                OnPropertyChanged(nameof(recentText2));
+            }
+        }
+        private string _recentText3;
+        public string recentText3
+        {
+            get => _recentText3;
+            set
+            {
+                _recentText3 = value;
+                OnPropertyChanged(nameof(recentText3));
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -153,7 +182,22 @@ namespace notifyd
                     case 7: SavedText7 = savedText; break;
                     case 8: SavedText8 = savedText; break;
                     case 9: SavedText9 = savedText; break;
+                    
                 }
+                if (i > 0 && i < 4)
+                {
+
+                    string recentText = Preferences.Get($"recentText{i}", "No saved text");
+                    switch (i)
+                    {
+                        case 1: recentText1 = recentText; break;
+                        case 2: recentText2 = recentText; break;
+                        case 3: recentText3 = recentText; break;
+                    }
+                }
+                if (string.IsNullOrEmpty(recentText1)) recentText1 = "No recent text";
+                if (string.IsNullOrEmpty(recentText2)) recentText2 = "No recent text";
+                if (string.IsNullOrEmpty(recentText3)) recentText3 = "No recent text";
             }
         }
 
@@ -163,10 +207,32 @@ namespace notifyd
             for (int i = 0; i < 10; i++)
             {
                 Preferences.Remove($"savedText{i}");
+                Preferences.Remove($"savedTextT{i}");
+                Preferences.Remove($"recentTitle{i}");
+                Preferences.Remove($"recentText{i}");
                 Preferences.Remove($"noOfEntry{i}"); // Clear the entry count as well
             }
             LoadSavedData(); // Refresh the UI after clearing
         }
+
+        private void CS(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Preferences.Remove($"savedText{i}");
+                Preferences.Remove($"savedTextT{i}");
+                Preferences.Remove($"noOfEntry{i}"); // Clear the entry count as well
+            }
+        }
+        private void CR(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Preferences.Remove($"recentTitle{i}");
+                Preferences.Remove($"recentText{i}");
+            }
+        }
+
 
         protected override void OnAppearing()
         {
@@ -218,6 +284,18 @@ namespace notifyd
         private async void S9(object sender, EventArgs e)
         {
             sendNotification(Preferences.Get("savedTextT9", ""), Preferences.Get("savedText9", ""));
+        }
+        private async void R1(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("recentTitle1", ""), Preferences.Get("recentText1", ""));
+        }
+        private async void R2(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("recentTitle2", ""), Preferences.Get("recentText2", ""));
+        }
+        private async void R3(object sender, EventArgs e)
+        {
+            sendNotification(Preferences.Get("recentTitle3", ""), Preferences.Get("recentText3", ""));
         }
 
         public void sendNotification(string title, string message)

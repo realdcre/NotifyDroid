@@ -39,18 +39,7 @@
 
             
            
-            <BoxView
-                HeightRequest="30" BackgroundColor="Transparent"></BoxView>
-            
-            <Image
-                 Source="profilepicture.png"
-                 HeightRequest="50"
-                 Aspect="AspectFit"
-                 SemanticProperties.Description="dot net bot in a race car number eight" />
-            <Label
-                   Text="(C) 2024 dcre, LDNX development LLC"
-                   Style="{StaticResource SubHeadline}" FontSize="10"
-                   ></Label>
+          
         </StackLayout>
     </ScrollView>
 

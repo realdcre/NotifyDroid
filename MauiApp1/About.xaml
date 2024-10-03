@@ -21,7 +21,7 @@
 
 
 
-            <Label Text="Version R1.1-2"
+            <Label Text="Version R1.2-0"
                    HorizontalOptions="Center"/>
 
             <Label
@@ -38,7 +38,20 @@
 
 
             </StackLayout>
+            <BoxView HeightRequest="50" BackgroundColor="Transparent" />
 
+            <Label
+                Text="Whats New:"
+                VerticalOptions="Center"
+                Style="{StaticResource Headline}"
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="- Added Recent Notifications &#x0a;- Added `Whats New` Section &#x0a;- Recolored Splash Screen"
+                FontSize="Body"
+                HorizontalTextAlignment="Start"
+                />
         </StackLayout>
     </ScrollView>
 </ContentPage>

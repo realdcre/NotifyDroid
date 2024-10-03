@@ -6,7 +6,7 @@
     <ScrollView>
 
         <VerticalStackLayout>
-            <!--<Label 
+            <Label 
             Text="Recent Notifications"
             VerticalOptions="Center"
             Style="{StaticResource Headline}"
@@ -16,14 +16,14 @@
 
                 <BoxView HeightRequest="80" />
                 <Label
-               Text="{Binding RecentText1}"
+               Text="{Binding recentText1}"
                FontSize="16"
                WidthRequest="260"
                VerticalOptions="Center"
                TextColor="White"
              />
 
-                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="R1" />
 
 
             </StackLayout>
@@ -31,14 +31,14 @@
 
                 <BoxView HeightRequest="80" />
                 <Label
-       Text="{Binding RecentText2}"
+       Text="{Binding recentText2}"
        FontSize="16"
        WidthRequest="260"
        VerticalOptions="Center"
        TextColor="White"
      />
 
-                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="R2"/>
 
 
             </StackLayout>
@@ -46,17 +46,17 @@
 
                 <BoxView HeightRequest="80" />
                 <Label
-       Text="{Binding RecentText3}"
+       Text="{Binding recentText3}"
        FontSize="16"
        WidthRequest="260"
        VerticalOptions="Center"
        TextColor="White"
      />
 
-                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" />
+                <Button Text="→" HeightRequest="50" WidthRequest="50" FontSize="18" TextColor="Black" BackgroundColor="#fe9496" Clicked="R3"/>
 
 
-            </StackLayout>-->
+            </StackLayout>
 
             <Label
             Text="Saved Notifications"
@@ -187,9 +187,16 @@
             <!--<Button Text="Clear all Recent" HorizontalOptions="Fill"
 BackgroundColor="#fe9496"/>-->
             <BoxView HeightRequest="30" BackgroundColor="Transparent"></BoxView>
-            <Button Text="Clear Saved" HorizontalOptions="Fill" Clicked="CA"
+            <Button Text="Clear Recent" HorizontalOptions="Fill" Clicked="CR"
 BackgroundColor="#fe9496"/>
-            
+
+            <BoxView HeightRequest="30" BackgroundColor="Transparent"></BoxView>
+            <Button Text="Clear Saved" HorizontalOptions="Fill" Clicked="CS"
+BackgroundColor="#fe9496"/>
+            <BoxView HeightRequest="30" BackgroundColor="Transparent"></BoxView>
+            <Button Text="Clear All" HorizontalOptions="Fill" Clicked="CA"
+BackgroundColor="#fe9496"/>
+
             <BoxView HeightRequest="50" BackgroundColor="Transparent" />
 
         </VerticalStackLayout>
