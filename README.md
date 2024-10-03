@@ -1,7 +1,7 @@
 
 
 
-![alt text](https://github.com/realdcre/NotifyDroid/blob/main/MauiApp1/Resources/Images/nofydroid.jpg)
+![alt text](https://github.com/realdcre/NotifyDroid/blob/main/NotifyDroid/Resources/Images/nofydroid.jpg)
 
 
 
@@ -9,13 +9,15 @@
 
 NotifyDroid enables you to be more productive. You can send youself convenient notifications and remind youself of whatever you want. It is that easy!
 
-NotifyDroid requires the following permission:
+### Required Permissions
      - Notifications
      - Internet Access
      - Vibrate
 
+### What is new in 1.2-0
+- Saved Notifications work properly now
+- up to three recent Notifications get saved
+
+
 It is packaged as an APK.
-
-With Version R1.1-0, NotifyDroid now lets you save notifications to send them later!
-
 The App is written in .NET MAUI for ANDROID!
