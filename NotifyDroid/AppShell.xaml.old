@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="notifyd.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:notifyd"
+    FlyoutBehavior="Flyout"
+    Shell.ForegroundColor="#fe9496"
+    Shell.TitleColor="#fe9496">
+    
+
+    <ShellContent
+        Title="NotifyDroid"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage">
+        <ShellContent.Icon>
+            <FileImageSource File="Resources/icons/home.png"/>
+            <!-- Corrected way to set image source -->
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Saved Items"
+        ContentTemplate="{DataTemplate local:Saved}"
+        Route="Saved">
+        <ShellContent.Icon>
+            <FileImageSource File="Resources/icons/clipboard.png"/>
+            <!-- Corrected way to set image source -->
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Preferences"
+        ContentTemplate="{DataTemplate local:UserPreferences}"
+        Route="UserPreferences">
+        <ShellContent.Icon>
+            <FileImageSource File="Resources/icons/settings.png"/>
+            <!-- Corrected way to set image source -->
+        </ShellContent.Icon>
+    </ShellContent>
+
+</Shell>  

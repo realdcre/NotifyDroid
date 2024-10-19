@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notifyd.UserPreferences"
+             Title="Preferences">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+            Text="Settings"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level2"
+            
+            />
+            <BoxView HeightRequest="30" BackgroundColor="Transparent"/>
+            <Label
+            Text="User Preferences"
+            Style="{StaticResource Headline}"
+            FontSize="18"
+            
+            />
+            
+            <HorizontalStackLayout>
+                <CheckBox
+        Color="#fe9496"
+        HeightRequest="50"
+        x:Name="PrefIOH"
+        />
+                <Label
+        Text="Display Image on Home Screen"
+        FontSize="17"
+        VerticalOptions="Center"
+        />
+
+            </HorizontalStackLayout>
+            <Label
+            Text="This disables the image on the start page"               
+            
+            />
+            <HorizontalStackLayout>
+                <CheckBox
+                    Color="#fe9496"
+                    HeightRequest="50"
+                    x:Name="PrefSIB"
+                    />
+                <Label
+                    Text="Use simplified Icon in Banners"
+                    FontSize="17"
+                    VerticalOptions="Center"
+                    />
+
+            </HorizontalStackLayout>
+            <Label
+            Text="This changes the Banenr icon to a simpler, less colorful icon" 
+            />
+            <BoxView HeightRequest="50" BackgroundColor="Transparent"/>
+            <Label
+            Text="Technical Settings (EXPERIMENTAL)"
+            Style="{StaticResource Headline}"
+            FontSize="18"
+    
+            />
+            <HorizontalStackLayout>
+                <CheckBox
+        Color="#fe9496"
+        HeightRequest="50"
+        x:Name="PrefexSQLE"
+        />
+                <Label
+        Text="Use SQLite for Storage"
+        FontSize="17"
+        VerticalOptions="Center"
+        />
+
+
+            </HorizontalStackLayout>
+            <Label
+            Text="This enables the Built-In SQLite Database feature for storing saved and recent notifications. This Is currently a unstable feature and may impact performance." 
+        />
+            <BoxView BackgroundColor="Transparent" HeightRequest="50"/>
+            <Label
+Text="About"
+Style="{StaticResource Headline}"
+FontSize="18"
+    
+/>
+
+            <HorizontalStackLayout>
+                <Image
+                    Source="profilepicture.png"
+                    HeightRequest="120"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight" />
+                <BoxView BackgroundColor="Transparent" WidthRequest="10"/>
+                <VerticalStackLayout>
+                    
+                    <Label
+                        Text="NotifyDroid"
+                        SemanticProperties.HeadingLevel="Level1"
+                        Style="{StaticResource SubHeadline}"
+                        FontSize="30"/>
+                    <Label Text="Version R1.2-0"
+                             HorizontalOptions="Center"/>
+
+                    <Label
+                           Text="(C) 2024 dcre"
+                            Style="{StaticResource SubHeadline}" 
+                            FontSize="18" />
+                </VerticalStackLayout>
+                <BoxView BackgroundColor="Transparent" WidthRequest="10" />
+                <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="Center">
+                    <!-- Use a single Image as Button content -->
+                    <Button HeightRequest="60" WidthRequest="60" Clicked="Git" BackgroundColor="#fe9496" ImageSource="github_mark.png"/>
+
+
+                    <Button HeightRequest="60" WidthRequest="60" Clicked="X" BackgroundColor="#fe9496" ImageSource="logo_black.png"/>
+
+
+                </StackLayout>
+            </HorizontalStackLayout>
+            
+
+           
+
+
+
+            
+
+
+            <BoxView HeightRequest="50" BackgroundColor="Transparent" />
+
+            <Label
+           Text="Whats New:"
+           VerticalOptions="Center"
+           Style="{StaticResource Headline}"
+           FontSize="18"
+           HorizontalOptions="Center" />
+
+            <Label
+           Text="- Added Settings to About Page &#x0a;- Added SQLite DB Support &#x0a;- Removed Shell"
+           FontSize="Body"
+           HorizontalTextAlignment="Start"
+           />
+            <BoxView HeightRequest="20" BackgroundColor="Transparent"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

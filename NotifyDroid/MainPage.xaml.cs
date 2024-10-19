@@ -7,6 +7,8 @@ namespace notifyd
 {
     public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -40,11 +42,33 @@ namespace notifyd
             return maxNoOfEntry;
         }
 
+        public void refreshImage()
+        {
+            bool var = Preferences.Get("PrefIOH", false);
+            if (var = false)
+            {
+                image.IsVisible = false;
+            } else
+            {
+                image.IsVisible = true;
+        }
+    }
         public MainPage()
         {
             InitializeComponent();
+            refreshImage();
+        
         }
+    
+        private async void NavSavedClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Saved());
 
+        }
+        private async void NavSettingsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserPreferences());
+        }
         void WriteToNextSaved(string title, string message)
         {
             int[] noOfEntries = new int[10];

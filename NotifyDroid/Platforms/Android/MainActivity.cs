@@ -1,9 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using AndroidX.Core.App; // Make sure this is added for NotificationCompat
+using AndroidX.Core.App;
 using Microsoft.Maui.Controls;
-
 
 namespace notifyd.Platforms.Android
 {
@@ -11,19 +10,21 @@ namespace notifyd.Platforms.Android
     public class MainActivity : MauiAppCompatActivity
     {
         int id = 0;
-
         const string CHANNEL_ID = "NotifyDroid";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            // Create the notification channel
             CreateNotificationChannel();
 
-            // Subscribe to the message
+            // Subscribe to messages from MainPage or other pages to send notifications
             MessagingCenter.Subscribe<MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
                 SendNotification(args.title, args.message);
             });
+
             MessagingCenter.Subscribe<Saved, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
                 SendNotification(args.title, args.message);
@@ -36,7 +37,7 @@ namespace notifyd.Platforms.Android
             {
                 var channel = new NotificationChannel(CHANNEL_ID, "NotifyDroid", NotificationImportance.Default)
                 {
-                    Description = "Sends your Notifydroid Reminders"
+                    Description = "Sends your NotifyDroid Reminders"
                 };
                 var notificationManager = (NotificationManager)GetSystemService(NotificationService);
                 notificationManager.CreateNotificationChannel(channel);
@@ -47,13 +48,13 @@ namespace notifyd.Platforms.Android
         {
             var notificationManager = (NotificationManager)GetSystemService(NotificationService);
 
-            // Use NotificationCompat.Builder instead of Notification.Builder
+            // Use correct resource reference for the icon
             var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .SetContentTitle(title)
                 .SetContentText(message)
-                .SetSmallIcon(_Microsoft.Android.Resource.Designer.Resource.Drawable.useappicon)
-                .SetAutoCancel(false) // Set to true to auto-cancel the notification
-                .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for large messages
+                .SetSmallIcon(Resource.Drawable.useappicon) // Make sure the correct icon is used
+                .SetAutoCancel(true) // Auto-cancel the notification
+                .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for larger messages
 
             // Show the notification
             notificationManager.Notify(id++, notificationBuilder.Build());

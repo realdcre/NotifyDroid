@@ -3,6 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="notifyd.MainPage">
 
+    <!-- Toolbar with Fluent Icons -->
+    <ContentPage.ToolbarItems>
+        <!-- Diskette icon for Save -->
+        
+
+        <ToolbarItem
+            IconImageSource="clipboard.png"
+            Clicked="NavSavedClicked" />
+
+        <!-- Cogwheel icon for Settings -->
+        <ToolbarItem
+            IconImageSource="settings.png"
+            Clicked="NavSettingsClicked" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Main Content -->
     <ScrollView>
         <StackLayout 
             Padding="30,0"
@@ -11,15 +27,16 @@
                 Source="useappicon.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                x:Name="image" />
 
             <Label
                 Text="Send Notification"
-                Style="{StaticResource Headline}"
+                FontSize="24"  
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Entry x:Name="titlen" Placeholder="Notification Title" FontSize="21" MaxLength="65"></Entry>
-            <Editor x:Name="contentn" Placeholder="Notification Body" HeightRequest="80" FontSize="16" MaxLength="240"></Editor>
+            <Entry x:Name="titlen" Placeholder="Notification Title" FontSize="21" MaxLength="65" />
+            <Editor x:Name="contentn" Placeholder="Notification Body" HeightRequest="80" FontSize="16" MaxLength="240" />
+
             <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
                 <Button
                     x:Name="CounterBtn"
@@ -30,17 +47,13 @@
                     WidthRequest="250"
                     HeightRequest="60"
                     BackgroundColor="#fe9496"/>
-                    
+
                 <Button
-                    x:Name="saveBtn" Text="Save" Clicked="Saved" BackgroundColor="#fe9496" />
+                    x:Name="saveBtn"
+                    Text="Save"
+                    Clicked="Saved"
+                    BackgroundColor="#fe9496" />
             </StackLayout>
-
-
-
-            
-           
-          
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

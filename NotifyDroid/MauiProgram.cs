@@ -13,6 +13,7 @@ namespace notifyd
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("SegoeFluentIcons.ttf", "Segoe Fluent Icons");
                 });
 
 #if DEBUG

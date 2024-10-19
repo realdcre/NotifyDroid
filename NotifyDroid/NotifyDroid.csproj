@@ -72,9 +72,56 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="AppShell.xaml.cs.old" />
+	  <None Remove="AppShell.xaml.old" />
+	  <None Remove="Resources\icons\clipboard.png" />
+	  <None Remove="Resources\icons\home.png" />
+	  <None Remove="Resources\icons\i.png" />
+	  <None Remove="Resources\icons\settings.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="AppShell.xaml.cs.old">
+	    <DependentUpon>AppShell.xaml.old</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Images\clipboard.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Images\home.png" />
+	  <Content Include="Resources\Images\i.png" />
+	  <Content Include="Resources\Images\settings.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Include="AppShell.xaml.old" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="UserPreferences.xaml.cs">
+	    <DependentUpon>UserPreferences.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="UserPreferences.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\icons\" />
+	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionNotifyDroidHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>
