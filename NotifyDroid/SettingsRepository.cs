@@ -6,8 +6,8 @@ namespace notifyd
 {
     public class SettingsRepository
     {
-        private static SettingsRepository _instance;
-        private readonly SQLiteConnection _connection;
+        public static SettingsRepository _instance;
+        public readonly SQLiteConnection _connection;
 
         public SettingsRepository(string dbPath)
         {
@@ -30,7 +30,7 @@ namespace notifyd
             _connection.InsertOrReplace(setting);
         }
 
-        public void StoreStringSetting(string key, string value)
+        public void SetString(string key, string value)
         {
             var setting = new Settings(key, value);
             _connection.InsertOrReplace(setting);
@@ -42,7 +42,7 @@ namespace notifyd
             return setting != null ? bool.Parse(setting.Value) : false;
         }
 
-        public string GetStringSetting(string key)
+        public string GetString(string key)
         {
             var setting = _connection.Table<Settings>().FirstOrDefault(s => s.Key == key && !s.IsBoolean);
             return setting != null ? setting.Value : null;

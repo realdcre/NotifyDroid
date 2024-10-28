@@ -2,12 +2,13 @@
 using System;
 using System.ComponentModel;
 using Microsoft.Maui.Storage;
+using notifyd;
 
 namespace notifyd
 {
     public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-
+        SettingsRepository settingsRepo = new SettingsRepository("home");
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -29,6 +30,42 @@ namespace notifyd
             return minIndex;
         }
 
+        public bool SQL = Preferences.Get("SQL(E)", false);
+
+        void SaveNextRecent(string m, string t)
+        {
+            if (SQL)
+            {
+                SaveNextRecentSQLE(m, t);
+            }
+            else
+            {
+                SaveNextRecentLEG(m, t);
+            }
+        }
+
+        void WriteToNextSaved(string m, string t)
+        {
+            if (SQL)
+            {
+                WriteToNextSavedSQLE(m, t);
+            }
+            else
+            {
+                WriteToNextSavedLEG(m, t);
+            }
+        }
+
+        void SetString(string key, string value)
+        {
+            settingsRepo.SetString(key, value);
+        }
+
+        string GetString(string key)
+        {
+            return settingsRepo.GetString(key);
+        }
+
         private int FindMax(int[] noOfEntries)
         {
             int maxNoOfEntry = noOfEntries[0];
@@ -44,32 +81,34 @@ namespace notifyd
 
         public void refreshImage()
         {
-            bool var = Preferences.Get("PrefIOH", false);
-            if (var = false)
+            bool var = Preferences.Get("IOH", true);
+            if (var == false)
             {
                 image.IsVisible = false;
-            } else
+            }
+            else
             {
                 image.IsVisible = true;
+            }
         }
-    }
+
         public MainPage()
         {
             InitializeComponent();
             refreshImage();
-        
         }
-    
+
         private async void NavSavedClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Saved());
-
         }
+
         private async void NavSettingsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new UserPreferences());
         }
-        void WriteToNextSaved(string title, string message)
+
+        void WriteToNextSavedLEG(string title, string message)
         {
             int[] noOfEntries = new int[10];
 
@@ -102,7 +141,7 @@ namespace notifyd
             Preferences.Set($"noOfEntry{minIndex}", setNo);
         }
 
-        public int GetMostRecentPath()
+        public int GetMostRecentPathLEG()
         {
             // Retrieve the number of saved entries for three specific entries (for example)
             int noOfEntry1 = Preferences.Get("nrOfSavedEntry1", 0);
@@ -126,10 +165,8 @@ namespace notifyd
             }
             return 0;
         }
-        
 
-        
-        private void SaveNextRecent(string message, string title)
+        private void SaveNextRecentLEG(string message, string title)
         {
             Preferences.Set("recentText3", Preferences.Get("recentText2", ""));
             Preferences.Set("recentTitle3", Preferences.Get("recentTitle2", ""));
@@ -137,53 +174,56 @@ namespace notifyd
             Preferences.Set("recentTitle2", Preferences.Get("recentTitle1", ""));
             Preferences.Set("recentText1", message);
             Preferences.Set("recentTitle1", title);
-           
         }
 
-
-        
-        private async void SendNotClicked(object sender, EventArgs e)
+        private void SaveNextRecentSQLE(string message, string title)
         {
-            string title = titlen.Text;
-            string message = contentn.Text;
-
-            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(message))
-            {
-                await DisplayAlert("Error", "Please enter a message", "OK");
-            }
-            else
-            {
-                // Send the message to the MainActivity using MessagingCenter
-                MessagingCenter.Send(this, "SendNotification", (title, message)); // Pass title and message as a tuple
-                SaveNextRecent(message, title);
-                // Clear the text inputs after sending the notification
-                titlen.Text = string.Empty;
-                contentn.Text = string.Empty;
-            }
+            SetString("recentText3", GetString("recentText2"));
+            SetString("recentTitle3", GetString("recentTitle2"));
+            SetString("recentText2", GetString("recentText1"));
+            SetString("recentTitle2", GetString("recentTitle1"));
+            SetString("recentText1", message);
+            SetString("recentTitle1", title);
         }
 
-        private async void Saved(object sender, EventArgs e)
+        public int GetMostRecentPathSQLE()
         {
-            string title = titlen.Text;
-            string content = contentn.Text;
+            int noOfEntry1 = int.Parse(GetString("nrOfSavedEntry1"));
+            int noOfEntry2 = int.Parse(GetString("nrOfSavedEntry2"));
+            int noOfEntry3 = int.Parse(GetString("nrOfSavedEntry3"));
 
-            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(content))
+            int highestNumber = Math.Max(Math.Max(noOfEntry3, noOfEntry2), noOfEntry1);
+
+            if (highestNumber == noOfEntry1) return 1;
+            if (highestNumber == noOfEntry2) return 2;
+            if (highestNumber == noOfEntry3) return 3;
+            return 0;
+        }
+
+        void WriteToNextSavedSQLE(string title, string message)
+        {
+            int[] noOfEntries = new int[10];
+
+            for (int i = 0; i < 10; i++)
             {
-                await DisplayAlert("Error", "Please enter a message\n(Saving Titles only is not yet supported)", "OK");
-            }
-            else if (string.IsNullOrEmpty(content))
-            {
-                await DisplayAlert("Error", "Message content cannot be empty", "OK");
-            }
-            else
-            {
-                // Save the title and content using WriteToNextSaved method
-                WriteToNextSaved(title, content);
+                noOfEntries[i] = int.Parse(GetString($"noOfEntry{i}"));
             }
 
-            // Clear the text inputs after saving the message
-            titlen.Text = string.Empty;
-            contentn.Text = string.Empty;
+            int minIndex = FindMinIndex(noOfEntries);
+            int maxNoOfEntry = FindMax(noOfEntries);
+
+            if (maxNoOfEntry == 0)
+            {
+                maxNoOfEntry = 1;
+                minIndex = 0;
+            }
+
+            int setNo = maxNoOfEntry + 1;
+
+            SetString($"nrOfSavedEntry{minIndex}", setNo.ToString());
+            SetString($"savedTextT{minIndex}", title);
+            SetString($"savedText{minIndex}", message);
+            SetString($"noOfEntry{minIndex}", setNo.ToString());
         }
     }
 }

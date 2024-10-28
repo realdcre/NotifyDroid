@@ -22,12 +22,28 @@ namespace notifyd.Platforms.Android
             // Subscribe to messages from MainPage or other pages to send notifications
             MessagingCenter.Subscribe<MainPage, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
-                SendNotification(args.title, args.message);
+                if (Preferences.Get("SIB", false))
+                {
+                    SendNotification(args.title, args.message);
+                } else
+                {
+                    SendNotificationSIB(args.title, args.message);
+                }
+                
+                
+                
             });
 
             MessagingCenter.Subscribe<Saved, (string title, string message)>(this, "SendNotification", (sender, args) =>
             {
-                SendNotification(args.title, args.message);
+                if (Preferences.Get("SIB", false))
+                {
+                    SendNotification(args.title, args.message);
+                }
+                else
+                {
+                    SendNotificationSIB(args.title, args.message);
+                }
             });
         }
 
@@ -44,7 +60,24 @@ namespace notifyd.Platforms.Android
             }
         }
 
+        
         public void SendNotification(string title, string message)
+        {
+            var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+            
+            // Use correct resource reference for the icon
+            var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .SetContentTitle(title)
+                .SetContentText(message)
+                .SetSmallIcon(Resource.Drawable.useappicon) // Make sure the correct icon is used
+                .SetAutoCancel(true) // Auto-cancel the notification
+                .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for larger messages
+
+            // Show the notification
+            notificationManager.Notify(id++, notificationBuilder.Build());
+        }
+
+        public void SendNotificationSIB(string title, string message)
         {
             var notificationManager = (NotificationManager)GetSystemService(NotificationService);
 
@@ -52,7 +85,7 @@ namespace notifyd.Platforms.Android
             var notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .SetContentTitle(title)
                 .SetContentText(message)
-                .SetSmallIcon(Resource.Drawable.useappicon) // Make sure the correct icon is used
+                .SetSmallIcon(Resource.Drawable.simplifiedicon) // Make sure the correct icon is used
                 .SetAutoCancel(true) // Auto-cancel the notification
                 .SetStyle(new NotificationCompat.BigTextStyle().BigText(message)); // Use BigTextStyle for larger messages
 

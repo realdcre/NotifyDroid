@@ -1,4 +1,5 @@
 namespace notifyd;
+using Microsoft.Maui.Storage;
 
 public partial class UserPreferences : ContentPage
 {
@@ -20,9 +21,38 @@ public partial class UserPreferences : ContentPage
     {
         openlink("https://x.com/real_dcre");
     }
-    private void PrefIOH(object sender, CheckedChangedEventArgs e)
+    private void OnIOHChange(object sender, CheckedChangedEventArgs e)
     {
-        
+        if (PrefIOH.IsChecked == true)
+        {
+            Preferences.Set("IOH", true);
+        }
+        else
+        {
+            Preferences.Set("IOH", false);
+        }
+    }
+    private void OnSIBChange(object sender, CheckedChangedEventArgs e)
+    {
+        if (PrefSIB.IsChecked == true)
+        {
+            Preferences.Set("SIB", true);
+        }
+        else
+        {
+            Preferences.Set("SIB", false);
+        }
+    }
+    private void OnSQLEChange(object sender, CheckedChangedEventArgs e)
+    {
+        if (PrefIOH.IsChecked == true)
+        {
+            Preferences.Set("SQL(E)", true);
+        }
+        else
+        {
+            Preferences.Set("SQL(E)", false);
+        }
     }
 
 

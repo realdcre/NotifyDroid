@@ -25,6 +25,8 @@
         Color="#fe9496"
         HeightRequest="50"
         x:Name="PrefIOH"
+        CheckedChanged="OnIOHChange"
+        IsChecked="true"
         />
                 <Label
         Text="Display Image on Home Screen"
@@ -42,6 +44,8 @@
                     Color="#fe9496"
                     HeightRequest="50"
                     x:Name="PrefSIB"
+                    CheckedChanged="OnSIBChange"
+
                     />
                 <Label
                     Text="Use simplified Icon in Banners"
@@ -51,7 +55,7 @@
 
             </HorizontalStackLayout>
             <Label
-            Text="This changes the Banenr icon to a simpler, less colorful icon" 
+            Text="This changes the Banner icon to a simpler, less colorful icon" 
             />
             <BoxView HeightRequest="50" BackgroundColor="Transparent"/>
             <Label
@@ -65,6 +69,8 @@
         Color="#fe9496"
         HeightRequest="50"
         x:Name="PrefexSQLE"
+        CheckedChanged="OnSQLEChange"
+
         />
                 <Label
         Text="Use SQLite for Storage"
