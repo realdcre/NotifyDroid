@@ -9,8 +9,11 @@ namespace notifyd
         public static SettingsRepository _instance;
         public readonly SQLiteConnection _connection;
 
-        public SettingsRepository(string dbPath)
+        public SettingsRepository()
         {
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "settings.db");
+
+            
             _connection = new SQLiteConnection(dbPath);
             _connection.CreateTable<Settings>();
         }
@@ -19,7 +22,7 @@ namespace notifyd
         {
             if (_instance == null)
             {
-                _instance = new SettingsRepository(dbPath);
+                _instance = new SettingsRepository();
             }
             return _instance;
         }

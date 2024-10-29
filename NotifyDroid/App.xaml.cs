@@ -13,7 +13,7 @@ namespace notifyd
 
         public App(string dbPath)
         {
-            _settingsRepository = new notifyd.SettingsRepository(dbPath); // Update the namespace to match the file location
+            _settingsRepository = new notifyd.SettingsRepository(); // Update the namespace to match the file location
         }
         public App()
         {

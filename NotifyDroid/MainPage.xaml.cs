@@ -8,7 +8,7 @@ namespace notifyd
 {
     public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-        SettingsRepository settingsRepo = new SettingsRepository("home");
+        SettingsRepository settingsRepo = new SettingsRepository();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -224,6 +224,44 @@ namespace notifyd
             SetString($"savedTextT{minIndex}", title);
             SetString($"savedText{minIndex}", message);
             SetString($"noOfEntry{minIndex}", setNo.ToString());
+        }
+
+        private async void SendNotClicked(object sender, EventArgs e)
+        {
+            string title = titlen.Text;
+            string message = contentn.Text;
+            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(message))
+            {
+                await DisplayAlert("Error", "Please enter a message", "OK");
+            }
+            else
+            {
+                // Send the message to the MainActivity using MessagingCenter
+                MessagingCenter.Send(this, "SendNotification", (title, message)); // Pass title and message as a tuple
+                SaveNextRecent(message, title);
+                // Clear the text inputs after sending the notification
+                titlen.Text = string.Empty;
+                contentn.Text = string.Empty;
+            }
+        }
+        private async void Saved(object sender, EventArgs e)
+        {
+            string title = titlen.Text;
+            string content = contentn.Text;
+            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(content))
+            {
+                await DisplayAlert("Error", "Please enter a message\n(Saving Titles only is not yet supported)", "OK");
+            }
+            else if (string.IsNullOrEmpty(content))
+            {
+                await DisplayAlert("Error", "Message content cannot be empty", "OK");
+            }
+            else
+            {
+                titlen.Text = string.Empty;
+                contentn.Text = string.Empty;
+            }
+
         }
     }
 }
