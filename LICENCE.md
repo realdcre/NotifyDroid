@@ -1,6 +1,6 @@
 ## License Grant
 
-This repository, NotifyDroid, is licensed under the following terms:
+This repository, NotifyDroid, is licensed under the the ClosedLicense-OpenSource License with the following terms:
 
 1. **Personal Use**: You are allowed to freely use, modify, and distribute the code in this repository for personal, non-commercial purposes.
 
