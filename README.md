@@ -1,4 +1,6 @@
-
+## This Repository was Archived and is permanently moved to 
+https://codeberg.org/LDNX-LLC/NotifyDroid
+All License Terms outlined here are of now void, the current license terms are to be found in the migrated repository.
 
 
 ![alt text](https://github.com/realdcre/NotifyDroid/blob/main/NotifyDroid/Resources/Images/nofydroid.jpg)
